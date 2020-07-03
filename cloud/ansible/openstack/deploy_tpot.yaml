@@ -1,0 +1,21 @@
+- name: Check host prerequisites
+  hosts: localhost
+  become: yes
+  roles:
+    - check
+
+- name: Deploy instance
+  hosts: localhost
+  roles:
+    - deploy
+
+- name: Install T-Pot on new instance
+  hosts: TPOT
+  remote_user: linux
+  become: yes
+  gather_facts: no
+  roles:
+    - install
+#    - custom_ews
+#    - custom_hpfeeds
+    - reboot

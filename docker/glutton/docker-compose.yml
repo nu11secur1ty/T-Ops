@@ -1,0 +1,20 @@
+version: '2.3'
+
+services:
+
+# glutton service
+  glutton:
+    build: .
+    container_name: glutton
+    restart: always
+    tmpfs:
+     - /var/lib/glutton:uid=2000,gid=2000
+     - /run:uid=2000,gid=2000
+    network_mode: "host"
+    cap_add:
+     - NET_ADMIN
+    image: "dtagdevsec/glutton:2006"
+    read_only: true
+    volumes:
+     - /data/glutton/log:/var/log/glutton
+     - /root/tpotce/docker/glutton/dist/rules.yaml:/opt/glutton/rules/rules.yaml
