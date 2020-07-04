@@ -4,7 +4,7 @@ https://0.0.0.0:64297/
 ![T-Ops](https://github.com/nu11secur1ty/tpotce/blob/master/wall/wall.png)
 
 https://0.0.0.0:64297/kibana/
-![kibanaOps](https://github.com/nu11secur1ty/tpotce/blob/master/wall/Kibana-Ops.PNG)
+![kibanaOps](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/Kibana.PNG)
 
 https://0.0.0.0:64297/spiderfoot/
 ![spiderfoot](https://github.com/nu11secur1ty/tpotce/blob/master/wall/sp.PNG)
