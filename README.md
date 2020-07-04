@@ -402,7 +402,7 @@ Just open a web browser and connect to `https://<your.ip>:64297`, enter
 
 and the **Landing Page** will automagically load. Now just click on the tool / link you want to start.
 
-![Dashbaord](https://github.com/nu11secur1ty/tpotce/blob/master/wall/wall.png)
+![Dashbaord](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/wall.png)
 
 <a name="kibana"></a>
 ## Kibana Dashboard
