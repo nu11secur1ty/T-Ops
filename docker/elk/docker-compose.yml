@@ -25,7 +25,7 @@ services:
     ports:
      - "127.0.0.1:64298:9200"
     image: "nu11secur1ty/elasticsearch"
-    image: "dtagdevsec/elasticsearch:2006"
+    #image: "dtagdevsec/elasticsearch:2006"
     volumes:
      - /data:/data
 
