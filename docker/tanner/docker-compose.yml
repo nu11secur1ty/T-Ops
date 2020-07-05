@@ -14,7 +14,8 @@ services:
     tty: true
     networks:
      - tanner_local
-    image: "dtagdevsec/redis:2006"
+    image: "dtagdevsec/redis"
+    #image: "dtagdevsec/redis:2006"
     read_only: true
 
 # PHP Sandbox service
@@ -28,7 +29,8 @@ services:
     tty: true
     networks:
      - tanner_local
-    image: "dtagdevsec/phpox:2006"
+    image: "nu11secur1ty/phpox"
+    #image: "dtagdevsec/phpox:2006"
     read_only: true
 
 # Tanner API Service
@@ -42,7 +44,7 @@ services:
     tty: true
     networks:
      - tanner_local
-    image: "nu11secur1ty
+    image: "nu11secur1ty/tanner"
     #mage: "dtagdevsec/tanner:2006"
     read_only: true
     volumes:
