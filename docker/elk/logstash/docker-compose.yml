@@ -12,7 +12,8 @@ services:
 #        condition: service_healthy
     env_file:
      - /opt/tpot/etc/compose/elk_environment
-    image: "dtagdevsec/logstash:2006"
+    image: "nu11secur1ty/logstash"
+    #image: "dtagdevsec/logstash:2006"
     volumes:
      - /data:/data
      - /root/tpotce/docker/elk/logstash/dist/logstash.conf:/etc/logstash/conf.d/logstash.conf
