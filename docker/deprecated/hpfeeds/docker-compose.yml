@@ -16,4 +16,4 @@ services:
      - hpfeeds_local
     ports:
      - "20000:20000"
-    image: "dtagdevsec/hpfeeds:latest"
+    image: "nu11secur1ty/hpfeeds"
