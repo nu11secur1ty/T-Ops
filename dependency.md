@@ -35,3 +35,7 @@ Device     Boot    Start       End   Sectors  Size Id Type
 /dev/sda1           2048  16001023  15998976  7.6G 82 Linux swap / Solaris
 /dev/sda2  *    16001024 209713151 193712128 92.4G 83 Linux
 ```
+- CPU
+```
+V 2
+```
