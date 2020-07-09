@@ -14,7 +14,7 @@ myBACKTITLE="T-Ops - ISO Creator"
 ### Debian Strech
 ### myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/mini.iso"
 ### Ubuntu Bionic
-myUBUNTULINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
+myMINIISOLINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
 myMINIISO="mini.iso"
 myTPOTISO="topsU.iso"
 myTPOTDIR="tpotiso"
