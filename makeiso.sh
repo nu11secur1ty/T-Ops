@@ -16,7 +16,7 @@ myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/c
 ### Ubuntu Bionic
 ### myMINIISOLINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
 myMINIISO="mini.iso"
-myTPOTISO="topsold.iso"
+myTPOTISO="topsstre.iso"
 myTPOTDIR="tpotiso"
 myTPOTSEED="iso/preseed/tpot.seed"
 myPACKAGES="dialog genisoimage syslinux syslinux-utils pv rsync udisks2 xorriso"
