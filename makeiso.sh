@@ -12,11 +12,11 @@ myBACKTITLE="T-Ops - ISO Creator"
 ### Debian Buster
 ### myMINIISOLINK="http://ftp.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot/mini.iso"
 ### Debian Strech
-### myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/mini.iso"
+myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/mini.iso"
 ### Ubuntu Bionic
-myMINIISOLINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
+### myMINIISOLINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
 myMINIISO="mini.iso"
-myTPOTISO="topsU.iso"
+myTPOTISO="topsold.iso"
 myTPOTDIR="tpotiso"
 myTPOTSEED="iso/preseed/tpot.seed"
 myPACKAGES="dialog genisoimage syslinux syslinux-utils pv rsync udisks2 xorriso"
