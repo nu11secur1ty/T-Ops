@@ -15,10 +15,15 @@ https://0.0.0.0/:64297/cyberchef/
 https://0.0.0.0:64297/myhead/
 ![](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/wall/myhead.PNG)
 
+**WARNING:** Every redirect link for `spiderfoot` and other tools setup are manual for the very curious!
+
+BR `Technical Manager` V.Varbanovski `@nu11secur1ty`
+
+------------------------------------------------------------------------------
 
 T-Ops 20.07 runs on Debian (Stable), is based heavily on
 
-[dependencies](https://github.com/nu11secur1ty/T-Ops/blob/master/dependency.md)
+[dependencies](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/dependency.md)
 
 [docker](https://www.docker.com/), [docker-compose](https://docs.docker.com/compose/)
 
