@@ -17,6 +17,13 @@ https://0.0.0.0:64297/myhead/
 
 **WARNING:** Every redirect link for `spiderfoot` and other tools setup are manual for the very curious!
 
+- - - Upgrade procedure!
+```bash
+cd /opt/tpot/
+systemctl stop tpot
+./update.sh
+telinit 6
+```
 BR `Technical Manager` V.Varbanovski `@nu11secur1ty`
 
 ------------------------------------------------------------------------------
