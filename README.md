@@ -18,12 +18,16 @@ https://0.0.0.0:64297/myhead/
 **WARNING:** Every redirect link for `spiderfoot` and other tools setup are manual for the very curious!
 
 - - - Upgrade procedure!
+
+***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
+
 ```bash
 cd /opt/tpot/
 systemctl stop tpot
 ./update.sh
 telinit 6
 ```
+
 BR `Technical Manager` V.Varbanovski `@nu11secur1ty`
 
 ------------------------------------------------------------------------------
