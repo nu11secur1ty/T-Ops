@@ -110,7 +110,7 @@ echo
 }
 
 
-# Stop T-Pot to avoid race conditions with running containers with regard to the current T-Pot config
+# Stop T-Pot to avoid race conditions with running containers with regard to the current T-Ops config
 function fuSTOP_TPOT () {
 echo "### Need to stop T-Ops ..."
 echo -n "###### $myBLUE Now stopping T-Ops.$myWHITE "
