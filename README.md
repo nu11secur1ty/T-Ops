@@ -33,6 +33,8 @@ telinit 6
 
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/unauthorized.png)
 
+- - - Update without permission!!!
+
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/update-T-Ops.png)
 
 BR `Technical Manager` V.Varbanovski `@nu11secur1ty`
