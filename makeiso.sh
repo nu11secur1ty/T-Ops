@@ -10,9 +10,9 @@ myBACKTITLE="T-Ops - ISO Creator"
 # For stability reasons Debian Sid installation is built on a stable installer
 #-----------------------------------------------------------------------------#
 ### Debian Buster
-### myMINIISOLINK="http://ftp.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot/mini.iso"
+myMINIISOLINK="http://ftp.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot/mini.iso"
 ### Debian Strech
-myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/mini.iso"
+###myMINIISOLINK="http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/mini.iso"
 ### Ubuntu Bionic
 ### myMINIISOLINK="http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso"
 myMINIISO="mini.iso"
