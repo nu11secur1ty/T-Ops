@@ -27,6 +27,8 @@ systemctl stop tpot
 ./update.sh
 telinit 6
 ```
+- - - Unouthorized
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/unauthorized.png)
 
 BR `Technical Manager` V.Varbanovski `@nu11secur1ty`
 
