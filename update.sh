@@ -10,7 +10,7 @@ myBLUE="[0;34m"
 
 # Check for existing tpot.yml
 function fuCONFIGCHECK () {
-  echo "### Checking for T-Pot configuration file ..."
+  echo "### Checking for T-Ops configuration file ..."
   if ! [ -L $myCONFIGFILE ];
     then
       echo -n "###### $myBLUE$myCONFIGFILE$myWHITE "
@@ -88,7 +88,7 @@ echo "### Checking for Release ID"
 myRELEASE=$(lsb_release -i | grep Debian -c)
 if [ "$myRELEASE" == "0" ] 
   then
-    echo "###### This version of T-Pot cannot be upgraded automatically. Please run a fresh install.$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
+    echo "###### This version of T-Ops cannot be upgraded automatically. Please run a fresh install.$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
     exit
 fi
 echo "### Checking for version tag ..."
@@ -112,13 +112,13 @@ echo
 
 # Stop T-Pot to avoid race conditions with running containers with regard to the current T-Pot config
 function fuSTOP_TPOT () {
-echo "### Need to stop T-Pot ..."
-echo -n "###### $myBLUE Now stopping T-Pot.$myWHITE "
+echo "### Need to stop T-Ops ..."
+echo -n "###### $myBLUE Now stopping T-Ops.$myWHITE "
 systemctl stop tpot
 if [ $? -ne 0 ];
   then
     echo " [ $myRED""NOT OK""$myWHITE ]"
-    echo "###### $myBLUE""Could not stop T-Pot.""$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
+    echo "###### $myBLUE""Could not stop T-Ops.""$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
     echo "Exiting.""$myWHITE"
     echo
     exit 1
@@ -211,13 +211,13 @@ apt-fast -y purge exim4-base mailutils pcp cockpit-pcp elasticsearch-curator
 apt-mark hold exim4-base mailutils pcp cockpit-pcp elasticsearch-curator
 echo
 
-echo "### Now replacing T-Pot related config files on host"
+echo "### Now replacing T-Ops related config files on host"
 cp host/etc/systemd/* /etc/systemd/system/
 systemctl daemon-reload
 echo
 
 # Ensure some defaults
-echo "### Ensure some T-Pot defaults with regard to some folders, permissions and configs."
+echo "### Ensure some T-Ops defaults with regard to some folders, permissions and configs."
 sed -i '/^port/Id' /etc/ssh/sshd_config
 echo "Port 64295" >> /etc/ssh/sshd_config
 echo
@@ -304,7 +304,7 @@ fi
 
 # Only run with command switch
 if [ "$1" != "-y" ]; then
-  echo "This script will update / upgrade all T-Pot related scripts, tools and packages to the latest versions."
+  echo "This script will update / upgrade all T-Ops related scripts, tools and packages to the latest versions."
   echo "A backup of /opt/tpot will be written to /root. If you are unsure, you should save your work."
   echo "This is a beta feature and only recommended for experienced users."
   echo "If you understand the involved risks feel free to run this script with the '-y' switch."
