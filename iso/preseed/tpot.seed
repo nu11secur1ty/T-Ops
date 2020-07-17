@@ -124,7 +124,7 @@ d-i debian-installer/quiet boolean false
 d-i debian-installer/splash boolean false
 
 #########################################
-### Post install (Grub & T-Pot Installer)
+### Post install (Grub & T-Ops Installer)
 #########################################
 d-i preseed/late_command string \
 in-target apt-get -y install grub-pc; \
