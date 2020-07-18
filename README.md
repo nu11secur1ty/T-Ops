@@ -15,8 +15,6 @@ https://0.0.0.0/:64297/cyberchef/
 https://0.0.0.0:64297/myhead/
 ![](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/wall/myhead.PNG)
 
-**WARNING:** Every redirect link for `spiderfoot` and other tools setup are manual for the very curious!
-
 - - - Upgrade procedure!
 
 ***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
