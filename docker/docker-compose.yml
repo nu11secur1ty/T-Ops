@@ -133,6 +133,11 @@ services:
     build: cyberchef/.
     image: "nu11secur1ty/cyberchef"
 
+# ovas-ops service
+  cyberchef:
+    build: ovas-ops/.
+    image: "nu11secur1ty/ovas-ops"
+    
 #### ELK
 ## Elasticsearch service
   elasticsearch:
