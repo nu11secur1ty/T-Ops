@@ -821,6 +821,7 @@ mkdir -vp /data/adbhoney/{downloads,log} \
          /data/suricata/log \
          /data/tanner/{log,files} \
          /data/p0f/log \
+	 /data/ovas-ops/log \
          /home/tsec/.ssh/
 touch /data/spiderfoot/spiderfoot.db
 touch /data/nginx/log/error.log
