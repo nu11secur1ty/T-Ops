@@ -1,21 +1,20 @@
 version: '2.3'
 
 networks:
-  honeypy_local:
+  ovas-ops_local:
 
 services:
 
 # HoneyPy service
   honeypy:
     build: .
-    container_name: honeypy
+    container_name: ovas-ops
     restart: always
     networks:
-     - honeypy_local
+     - ovas-ops_local
     ports:
      - "8080:9392"
-    image: "nu11secur1ty/honeypy"
-    #image: "dtagdevsec/honeypy:2006"
+    image: "nu11secur1ty/ovas-ops"
     read_only: true
     volumes:
-     - /data/honeypy/log:/opt/honeypy/log
+     - /data/ovas-ops/log:/opt/ovas-ops/log
