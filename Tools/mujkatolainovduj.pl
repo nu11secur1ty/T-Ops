@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+# Author nu11secur1ty by OPS
 use strict;
 use warnings;
 use diagnostics;
