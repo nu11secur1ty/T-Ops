@@ -82,8 +82,8 @@ echo
 
 # Let's check for version
 function fuCHECK_VERSION () {
-local myMINVERSION="19.03.0"
-local myMASTERVERSION="20.06.0"
+local myMINVERSION="20.20.03"
+local myMASTERVERSION="20.20.03"
 echo
 echo "### Checking for Release ID"
 myRELEASE=$(lsb_release -i | grep Debian -c)
