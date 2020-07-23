@@ -4,9 +4,6 @@ use strict;
 use warnings;
 use diagnostics;
 
-my $open_VAS = `docker pull nu11secur1ty/ovas-ops:latest`;
-  system($open_VAS);
-    print "$open_VAS\n";
-my $run_VAS = `docker run --detach --publish 8080:9392 --env PASSWORD="password" --volume gvm-data:/data --name gvm nu11secur1ty/ovas-ops:latest`;
-  system($run_VAS);
-    print "$run_VAS\n";
+my $sky = `docker run -d --privileged --pid=host --net=host -p 8082:8082 -p 8081:8081 -e SKYDIVE_ANALYZER_LISTEN=0.0.0.0:8082 -v /var/run/docker.sock:/var/run/docker.sock -v /run/netns:/var/run/netns skydive/skydive allinone`;
+  system($sky);
+    print "$sky\n";
