@@ -21,6 +21,9 @@ https://0.0.0.0/:64297/cyberchef/
 https://0.0.0.0:64297/myhead/
 ![](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/wall/myhead.PNG)
 
+http://0.0.0.0:8082/
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sky.PNG)
+
 - - - Upgrade procedure!
 
 ***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
