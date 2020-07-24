@@ -28,7 +28,7 @@ http://0.0.0.0:8082/
 
 ***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
 
-**FOR PROD** = The ports: `64297`, `64294`, and `8082` are MUST be Filtered, for outside!
+**FOR PROD** = The ports: `64297`, `64294`, and `http://0.0.0.0:8082` are MUST be Filtered, for outside!
 
 ```bash
 cd /opt/tpot/
