@@ -1,3 +1,3 @@
 #!/usr/bin/bash
-docker stop thehive_cortex_1 thehive_elasticsearch_1 thehive_thehive_1
+docker stop thehive-ops_cortex_1 thehive-ops_elasticsearch_1 thehive-ops_thehive_1
   exit 0;
