@@ -21,9 +21,13 @@ https://0.0.0.0/:64297/cyberchef/
 https://0.0.0.0:64297/myhead/
 ![](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/wall/myhead.PNG)
 
-***Post installing Tools*** for`dvanced`users, and for those which order them
 
------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+***Post installing Tools*** for`dvanced`users, and for those which order them!
+For Orders, please use contacts: ops-secur1ty@protonmail.com
+
+- - - Net analis
 
 http://0.0.0.0:8082/
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sky.PNG)
