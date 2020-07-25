@@ -11,3 +11,9 @@
    83  docker rm f092127a611e
    84  docker rm fc91ebd1baae
 ```
+- - - stop service
+```bash
+   89  netstat -tulpn | grep 9000
+   90  kill -9 16041
+   91  kill -9 16041
+```
