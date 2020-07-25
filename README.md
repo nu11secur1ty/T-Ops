@@ -24,6 +24,9 @@ https://0.0.0.0:64297/myhead/
 http://0.0.0.0:8082/
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sky.PNG)
 
+http://0.0.0.0:9000/
+![]()
+
 - - - Upgrade procedure!
 
 ***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
