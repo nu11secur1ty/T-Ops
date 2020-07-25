@@ -24,14 +24,16 @@ https://0.0.0.0:64297/myhead/
 http://0.0.0.0:8082/
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sky.PNG)
 
+- - - Incident Response
+
 http://0.0.0.0:9000/
-![]()
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/inc/inc-dash.PNG)
 
 - - - Upgrade procedure!
 
 ***WARNING:*** `You will be prompted to give username and password, this is only for OPS team, the owners of Teapot-T-Ops!`
 
-**FOR PROD** = The ports: `64297`, `64294`, and `http://0.0.0.0:8082` are MUST be Filtered, for outside!
+**FOR PROD** = The ports: `64297`, `64294`, `9000` and `http://0.0.0.0:8082` are MUST be Filtered, for outside!
 
 ```bash
 cd /opt/tpot/
