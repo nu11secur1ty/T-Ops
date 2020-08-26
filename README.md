@@ -13,13 +13,13 @@ https://0.0.0.0:64297/kibana/
 ![kibanaOps](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/Kibana.PNG)
 
 https://0.0.0.0:64297/spiderfoot/
-![spiderfoot](https://github.com/nu11secur1ty/tpotce/blob/master/wall/sp.PNG)
+![spiderfoot](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sp.PNG)
 
 https://0.0.0.0/:64297/cyberchef/
-![cyberchef](https://github.com/nu11secur1ty/tpotce/blob/master/wall/CB.PNG)
+![cyberchef](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/CB.PNG)
 
 https://0.0.0.0:64297/myhead/
-![](https://github.com/Offensive-Penetration-Security/T-Ops/blob/master/wall/myhead.PNG)
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/myhead.PNG)
 
 
 ----------------------------------------------------------------------------------
