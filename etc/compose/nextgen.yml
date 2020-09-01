@@ -11,7 +11,7 @@ networks:
   conpot_local_ipmi:
   conpot_local_kamstrup_382:
   cowrie_local:
-  cyberchef_local:
+  # cyberchef_local:
   dicompot_local:
   dionaea_local:
   elasticpot_local:
@@ -514,15 +514,15 @@ services:
 ##################
 
 # Cyberchef service
-  cyberchef:
-    container_name: cyberchef
-    restart: always
-    networks:
-     - cyberchef_local
-    ports:
-     - "127.0.0.1:64299:8000"
-    image: "nu11secur1ty/cyberchef"
-    read_only: true
+#  cyberchef:
+#    container_name: cyberchef
+#    restart: always
+#    networks:
+#     - cyberchef_local
+#    ports:
+#     - "127.0.0.1:64299:8000"
+#    image: "nu11secur1ty/cyberchef"
+#    read_only: true
 
 #### ELK
 ## Elasticsearch service
