@@ -15,9 +15,6 @@ https://0.0.0.0:64297/kibana/
 https://0.0.0.0:64297/spiderfoot/
 ![spiderfoot](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sp.PNG)
 
-https://0.0.0.0:64297/myhead/
-![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/myhead.PNG)
-
 
 ----------------------------------------------------------------------------------
 
