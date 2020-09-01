@@ -129,9 +129,9 @@ services:
 ##################
 
 # Cyberchef service
-  cyberchef:
-    build: cyberchef/.
-    image: "nu11secur1ty/cyberchef"
+  #cyberchef:
+    #build: cyberchef/.
+    #image: "nu11secur1ty/cyberchef"
     
 #### ELK
 ## Elasticsearch service
