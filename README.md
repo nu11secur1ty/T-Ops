@@ -2,21 +2,18 @@
 
 - Login
 
-![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.png)
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.PNG)
 
 ----------------------------------------------------------------------
 
 https://0.0.0.0:64297/
-![T-Ops](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.png)
+![T-Ops](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.PNG)
 
 https://0.0.0.0:64297/kibana/
 ![kibanaOps](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/Kibana.PNG)
 
 https://0.0.0.0:64297/spiderfoot/
 ![spiderfoot](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sp.PNG)
-
-https://0.0.0.0/:64297/cyberchef/
-![cyberchef](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/CB.PNG)
 
 https://0.0.0.0:64297/myhead/
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/myhead.PNG)
