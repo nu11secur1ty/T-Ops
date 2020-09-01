@@ -6,9 +6,6 @@
 
 ----------------------------------------------------------------------
 
-
-![T-Ops](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.PNG)
-
 - - - Thief Hunting
 
 ![kibanaOps](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/Kibana.PNG)
