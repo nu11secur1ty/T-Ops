@@ -7,7 +7,7 @@
 ----------------------------------------------------------------------
 
 https://0.0.0.0:64297/
-![T-Ops](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/wall.png)
+![T-Ops](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/T-Ops.png)
 
 https://0.0.0.0:64297/kibana/
 ![kibanaOps](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/Kibana.PNG)
