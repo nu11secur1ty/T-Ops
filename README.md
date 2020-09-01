@@ -15,20 +15,15 @@
 ![spiderfoot](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sp.PNG)
 
 
-----------------------------------------------------------------------------------
-
-***Post installing Tools*** for`dvanced`users, and for those which order them!
-For Orders, please use contacts: ops-secur1ty@protonmail.com
-
-- - - Net analis
-
-http://0.0.0.0:8082/
-![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/sky.PNG)
-
 - - - Incident Response
 
-http://0.0.0.0:9000/
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/wall/inc/inc-dash.PNG)
+
+
+----------------------------------------------------------------------------------
+
+
+
 
 - - - Upgrade procedure!
 
