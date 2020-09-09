@@ -165,9 +165,9 @@ services:
     image: "nu11secur1ty/nginx"
 
 # Spiderfoot service
-  spiderfoot:
-    build: spiderfoot/.
-    image: "nu11secur1ty/spiderfoot"
+#  spiderfoot:
+#    build: spiderfoot/.
+#    image: "nu11secur1ty/spiderfoot"
     
 # Old example: 
 # image: "dtagdevsec/head:2006"
