@@ -7,7 +7,7 @@ networks:
   dicompot_local:
   medpot_local:
   ewsposter_local:
-  spiderfoot_local:
+  # spiderfoot_local:
 
 services:
 
@@ -221,13 +221,13 @@ services:
     # - /data/nginx/heimdall/storage:/var/lib/nginx/html/storage
 
 # Spiderfoot service
-  spiderfoot:
-    container_name: spiderfoot
-    restart: always
-    networks:
-     - spiderfoot_local
-    ports:
-     - "127.0.0.1:64303:8080"
-    image: "nu11secur1ty/spiderfoot"
-    volumes:
-     - /data/spiderfoot/spiderfoot.db:/home/spiderfoot/spiderfoot.db
+ # spiderfoot:
+ #   container_name: spiderfoot
+ #   restart: always
+ #   networks:
+ #    - spiderfoot_local
+ #   ports:
+ #    - "127.0.0.1:64303:8080"
+ #   image: "nu11secur1ty/spiderfoot"
+ #   volumes:
+ #    - /data/spiderfoot/spiderfoot.db:/home/spiderfoot/spiderfoot.db
