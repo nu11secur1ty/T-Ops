@@ -1,5 +1,13 @@
 ![T-Pot](doc/T-Ops.png)
 
+- - - Configuration
+```
+etc
+docker
+install.sh
+makeiso.sh
+```
+
 T-Pot 20.06 runs on Debian (Stable), is based heavily on
 
 [docker](https://www.docker.com/), [docker-compose](https://docs.docker.com/compose/)
