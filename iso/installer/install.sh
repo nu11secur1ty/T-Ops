@@ -25,7 +25,7 @@ myPREINSTALLPACKAGES="aria2 apache2-utils cracklib-runtime curl dialog figlet fu
 myINSTALLPACKAGES="aria2 apache2-utils apparmor apt-transport-https aufs-tools bash-completion build-essential ca-certificates cgroupfs-mount cockpit cockpit-docker console-setup console-setup-linux cracklib-runtime curl debconf-utils dialog dnsutils docker.io docker-compose ethtool fail2ban figlet genisoimage git glances grc haveged html2text htop iptables iw jq kbd libcrack2 libltdl7 libpam-google-authenticator man mosh multitail net-tools npm ntp openssh-server openssl pass pigz prips software-properties-common syslinux psmisc pv python3-pip toilet unattended-upgrades unzip vim wget wireless-tools wpasupplicant"
 myINFO="\
 ###########################################
-### T-Pot Installer for Debian (Stable) ###
+### T-Ops Installer for Debian (Stable) ###
 ###########################################
 
 Disclaimer:
@@ -689,7 +689,7 @@ hash -r
 if ! [ "$myTPOT_DEPLOYMENT_TYPE" == "iso" ];
   then
     fuBANNER "Cloning T-Pot"
-    git clone https://github.com/telekom-security/tpotce /opt/tpot
+    git clone https://github.com/nu11secur1ty/T-Ops /opt/tpot
 fi
 
 # Let's create the T-Pot user
