@@ -10,8 +10,8 @@ myBACKTITLE="T-Pot - ISO Creator"
 # For stability reasons Debian Sid installation is built on a stable installer
 myMINIISOLINK="http://ftp.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot/mini.iso"
 myMINIISO="mini.iso"
-myTPOTISO="tops.iso"
-myTPOTDIR="topsiso"
+myTPOTISO="tpot.iso"
+myTPOTDIR="tpotiso"
 myTPOTSEED="iso/preseed/tpot.seed"
 myPACKAGES="dialog genisoimage syslinux syslinux-utils pv rsync udisks2 xorriso"
 myPFXFILE="iso/installer/keys/8021x.pfx"
@@ -78,7 +78,7 @@ function valid_ip()
 }
 
 # Let's ask if the user wants to run the script ...
-dialog --backtitle "$myBACKTITLE" --title "[ Continue? ]" --yesno "\nDownload latest supported Debian Mini ISO and build the T-Ops Install Image." 8 50
+dialog --backtitle "$myBACKTITLE" --title "[ Continue? ]" --yesno "\nDownload latest supported Debian Mini ISO and build the T-Pot Install Image." 8 50
 mySTART=$?
 if [ "$mySTART" = "1" ];
   then
@@ -244,7 +244,7 @@ cd ..
 
 # Let's create the new .iso
 cd $myTPOTDIR
-xorrisofs -gui -D -r -V "T-Ops" -cache-inodes -J -l -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../$myTPOTISO ../$myTPOTDIR 2>&1 | awk '{print $1+0} fflush()' | cut -f1 -d"." | dialog --backtitle "$myBACKTITLE" --title "[ Building T-Pot .iso ... ]" --gauge "" 5 70 0
+xorrisofs -gui -D -r -V "T-Pot" -cache-inodes -J -l -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../$myTPOTISO ../$myTPOTDIR 2>&1 | awk '{print $1+0} fflush()' | cut -f1 -d"." | dialog --backtitle "$myBACKTITLE" --title "[ Building T-Pot .iso ... ]" --gauge "" 5 70 0
 echo 100 | dialog --backtitle "$myBACKTITLE" --title "[ Building T-Pot .iso ... Done! ]" --gauge "" 5 70
 cd ..
 isohybrid $myTPOTISO

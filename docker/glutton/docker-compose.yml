@@ -13,8 +13,7 @@ services:
     network_mode: "host"
     cap_add:
      - NET_ADMIN
-    image: "nu11secur1ty/glutton"
-    #image: "dtagdevsec/glutton:2006"
+    image: "ghcr.io/telekom-security/glutton:2006"
     read_only: true
     volumes:
      - /data/glutton/log:/var/log/glutton

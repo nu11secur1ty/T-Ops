@@ -1,5 +1,5 @@
 #!/bin/bash
-# T-Ops Universal Installer
+# T-Pot Universal Installer
 
 # Installer can only be executed once.
 myTPOT_INSTALL_LOG="/install.log"
@@ -13,19 +13,19 @@ fi
 # I. Global vars #
 ##################
 
-myBACKTITLE="T-Ops-Installer"
+myBACKTITLE="T-Pot-Installer"
 myCONF_FILE="/root/installer/iso.conf"
 myPROGRESSBOXCONF=" --backtitle "$myBACKTITLE" --progressbox 24 80"
-mySITES="https://hub.docker.com https://github.com https://pypi.python.org https://debian.org"
+mySITES="https://ghcr.io https://github.com https://pypi.python.org https://debian.org"
 myTPOTCOMPOSE="/opt/tpot/etc/tpot.yml"
 myLSB_STABLE_SUPPORTED="stretch buster"
 myLSB_TESTING_SUPPORTED="stable"
 myREMOTESITES="https://hub.docker.com https://github.com https://pypi.python.org https://debian.org https://listbot.sicherheitstacho.eu"
-myPREINSTALLPACKAGES="aria2 apache2-utils cracklib-runtime curl dialog figlet fuse grc libcrack2 libpq-dev lsb-release netselect-apt net-tools software-properties-common toilet"
-myINSTALLPACKAGES="aria2 apache2-utils apparmor apt-transport-https aufs-tools bash-completion build-essential ca-certificates cgroupfs-mount cockpit cockpit-docker console-setup console-setup-linux cracklib-runtime curl debconf-utils dialog dnsutils docker.io docker-compose ethtool fail2ban figlet genisoimage git glances grc haveged html2text htop iptables iw jq kbd libcrack2 libltdl7 libpam-google-authenticator man mosh multitail netselect-apt net-tools npm ntp openssh-server openssl pass pigz prips software-properties-common syslinux psmisc pv python3-pip toilet unattended-upgrades unzip vim wget wireless-tools wpasupplicant"
+myPREINSTALLPACKAGES="aria2 apache2-utils cracklib-runtime curl dialog figlet fuse grc libcrack2 libpq-dev lsb-release net-tools software-properties-common toilet"
+myINSTALLPACKAGES="aria2 apache2-utils apparmor apt-transport-https aufs-tools bash-completion build-essential ca-certificates cgroupfs-mount cockpit cockpit-docker console-setup console-setup-linux cracklib-runtime curl debconf-utils dialog dnsutils docker.io docker-compose ethtool fail2ban figlet genisoimage git glances grc haveged html2text htop iptables iw jq kbd libcrack2 libltdl7 libpam-google-authenticator man mosh multitail net-tools npm ntp openssh-server openssl pass pigz prips software-properties-common syslinux psmisc pv python3-pip toilet unattended-upgrades unzip vim wget wireless-tools wpasupplicant"
 myINFO="\
 ###########################################
-### T-Ops Installer for Debian (Stable) ###
+### T-Pot Installer for Debian (Stable) ###
 ###########################################
 
 Disclaimer:
@@ -290,21 +290,6 @@ function fuCHECKNET {
 # Install T-Pot dependencies
 function fuGET_DEPS {
   export DEBIAN_FRONTEND=noninteractive
-  # Determine fastest mirror
-  echo
-  echo "### Determine fastest mirror for your location."
-  echo
-  netselect-apt -n -a amd64 stable && cp sources.list /etc/apt/
-  mySOURCESCHECK=$(cat /etc/apt/sources.list | grep -c stable)
-  if [ "$mySOURCESCHECK" == "0" ]
-    then
-      echo "### Automatic mirror selection failed, using main mirror."
-      # Point to Debian (stable)
-tee /etc/apt/sources.list <<EOF
-deb http://deb.debian.org/debian stable main contrib non-free
-deb-src http://deb.debian.org/debian stable main contrib non-free
-EOF
-  fi
   echo
   echo "### Getting update information."
   echo
@@ -704,8 +689,7 @@ hash -r
 if ! [ "$myTPOT_DEPLOYMENT_TYPE" == "iso" ];
   then
     fuBANNER "Cloning T-Pot"
-    git clone https://github.com/nu11secur1ty/T-Ops /opt/tpot
-    # git clone https://github.com/nu11secur1ty/tpotce /opt/tpot
+    git clone https://github.com/telekom-security/tpotce /opt/tpot
 fi
 
 # Let's create the T-Pot user
@@ -811,6 +795,7 @@ mkdir -vp /data/adbhoney/{downloads,log} \
          /data/heralding/log \
          /data/honeypy/log \
          /data/honeysap/log \
+	 /data/ipphoney/log \
          /data/mailoney/log \
          /data/medpot/log \
          /data/nginx/{log,heimdall} \

@@ -16,5 +16,4 @@ services:
      - hpfeeds_local
     ports:
      - "20000:20000"
-    #image: "nu11secur1ty/hpfeeds"
-    image: "dtagdevsec/hpfeeds:latest"
+    image: "ghcr.io/telekom-security/hpfeeds:latest"

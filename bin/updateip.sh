@@ -2,6 +2,7 @@
 # Let's add the first local ip to the /etc/issue and external ip to ews.ip file
 # If the external IP cannot be detected, the internal IP will be inherited.
 source /etc/environment
+myUUID=$(lsblk -o MOUNTPOINT,UUID | grep "/" | awk '{ print $2 }')
 myLOCALIP=$(hostname -I | awk '{ print $1 }')
 myEXTIP=$(/opt/tpot/bin/myip.sh)
 if [ "$myEXTIP" = "" ];
@@ -10,7 +11,7 @@ if [ "$myEXTIP" = "" ];
 fi
 mySSHUSER=$(cat /etc/passwd | grep 1000 | cut -d ':' -f1)
 echo "[H[2J" > /etc/issue
-toilet -f ivrit -F metal --filter border:metal "T-Ops   20.20.03" | sed 's/\\/\\\\/g' >> /etc/issue
+toilet -f ivrit -F metal --filter border:metal "T-Pot   20.06" | sed 's/\\/\\\\/g' >> /etc/issue
 echo >> /etc/issue
 echo ",---- [ [1;34m\n[0m ] [ [0;34m\d[0m ] [ [1;30m\t[0m ]" >> /etc/issue
 echo "|" >> /etc/issue
@@ -26,6 +27,7 @@ tee /data/ews/conf/ews.ip << EOF
 ip = $myEXTIP
 EOF
 tee /opt/tpot/etc/compose/elk_environment << EOF
+HONEY_UUID=$myUUID
 MY_EXTIP=$myEXTIP
 MY_INTIP=$myLOCALIP
 MY_HOSTNAME=$HOSTNAME

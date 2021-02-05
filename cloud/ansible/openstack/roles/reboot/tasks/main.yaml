@@ -1,4 +1,4 @@
-- name: Finally rebooting T-Ops
+- name: Finally rebooting T-Pot
   command: shutdown -r now
   async: 1
   poll: 0

@@ -1,5 +1,5 @@
 ##############################################
-### T-Ops Preseed Configuration File by mo ###
+### T-Pot Preseed Configuration File by mo ###
 ##############################################
 
 ####################
@@ -109,7 +109,7 @@ tasksel tasksel/first multiselect ssh-server
 ########################
 ### Package Installation
 ########################
-d-i pkgsel/include string apache2-utils cracklib-runtime curl dialog figlet git grc libcrack2 libpq-dev lsb-release netselect-apt net-tools software-properties-common toilet
+d-i pkgsel/include string apache2-utils cracklib-runtime curl dialog figlet git grc libcrack2 libpq-dev lsb-release net-tools software-properties-common toilet
 popularity-contest popularity-contest/participate boolean false
 
 #################
@@ -124,14 +124,14 @@ d-i debian-installer/quiet boolean false
 d-i debian-installer/splash boolean false
 
 #########################################
-### Post install (Grub & T-Ops Installer)
+### Post install (Grub & T-Pot Installer)
 #########################################
 d-i preseed/late_command string \
 in-target apt-get -y install grub-pc; \
 in-target grub-install --force $(debconf-get partman-auto/disk); \
 update-dev; \
 in-target update-grub; \
-in-target git clone --depth=1 https://github.com/nu11secur1ty/T-Ops /opt/tpot; \
+in-target git clone --depth=1 https://github.com/telekom-security/tpotce /opt/tpot; \
 in-target sed -i 's/allow-hotplug/auto/g' /etc/network/interfaces; \
 #in-target apt-get -y remove exim4-base; \
 #in-target apt-get -y autoremove; \

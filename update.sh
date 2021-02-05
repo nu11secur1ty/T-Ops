@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-# @nu11secur1ty
+#!/bin/bash
 
 # Some global vars
 myCONFIGFILE="/opt/tpot/etc/tpot.yml"
@@ -11,7 +10,7 @@ myBLUE="[0;34m"
 
 # Check for existing tpot.yml
 function fuCONFIGCHECK () {
-  echo "### Checking for T-Ops configuration file ..."
+  echo "### Checking for T-Pot configuration file ..."
   if ! [ -L $myCONFIGFILE ];
     then
       echo -n "###### $myBLUE$myCONFIGFILE$myWHITE "
@@ -82,14 +81,14 @@ echo
 
 # Let's check for version
 function fuCHECK_VERSION () {
-local myMINVERSION="20.20.03"
-local myMASTERVERSION="20.20.03"
+local myMINVERSION="19.03.0"
+local myMASTERVERSION="20.06.1"
 echo
 echo "### Checking for Release ID"
 myRELEASE=$(lsb_release -i | grep Debian -c)
 if [ "$myRELEASE" == "0" ] 
   then
-    echo "###### This version of T-Ops cannot be upgraded automatically. Please run a fresh install.$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
+    echo "###### This version of T-Pot cannot be upgraded automatically. Please run a fresh install.$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
     exit
 fi
 echo "### Checking for version tag ..."
@@ -111,15 +110,15 @@ echo
 }
 
 
-# Stop T-Pot to avoid race conditions with running containers with regard to the current T-Ops config
+# Stop T-Pot to avoid race conditions with running containers with regard to the current T-Pot config
 function fuSTOP_TPOT () {
-echo "### Need to stop T-Ops ..."
-echo -n "###### $myBLUE Now stopping T-Ops.$myWHITE "
+echo "### Need to stop T-Pot ..."
+echo -n "###### $myBLUE Now stopping T-Pot.$myWHITE "
 systemctl stop tpot
 if [ $? -ne 0 ];
   then
     echo " [ $myRED""NOT OK""$myWHITE ]"
-    echo "###### $myBLUE""Could not stop T-Ops.""$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
+    echo "###### $myBLUE""Could not stop T-Pot.""$myWHITE"" [ $myRED""NOT OK""$myWHITE ]"
     echo "Exiting.""$myWHITE"
     echo
     exit 1
@@ -184,7 +183,7 @@ function fuUPDATER () {
 export DEBIAN_FRONTEND=noninteractive
 echo "### Installing apt-fast"
 /bin/bash -c "$(curl -sL https://raw.githubusercontent.com/ilikenwf/apt-fast/master/quick-install.sh)"
-local myPACKAGES="aria2 apache2-utils apparmor apt-transport-https aufs-tools bash-completion build-essential ca-certificates cgroupfs-mount cockpit cockpit-docker console-setup console-setup-linux cracklib-runtime curl debconf-utils dialog dnsutils docker.io docker-compose ethtool fail2ban figlet genisoimage git glances grc haveged html2text htop iptables iw jq kbd libcrack2 libltdl7 libpam-google-authenticator man mosh multitail netselect-apt net-tools npm ntp openssh-server openssl pass pigz prips software-properties-common syslinux psmisc pv python3-elasticsearch-curator python3-pip toilet unattended-upgrades unzip vim wget wireless-tools wpasupplicant"
+local myPACKAGES="aria2 apache2-utils apparmor apt-transport-https aufs-tools bash-completion build-essential ca-certificates cgroupfs-mount cockpit cockpit-docker console-setup console-setup-linux cracklib-runtime curl debconf-utils dialog dnsutils docker.io docker-compose ethtool fail2ban figlet genisoimage git glances grc haveged html2text htop iptables iw jq kbd libcrack2 libltdl7 libpam-google-authenticator man mosh multitail net-tools npm ntp openssh-server openssl pass pigz prips software-properties-common syslinux psmisc pv python3-elasticsearch-curator python3-pip toilet unattended-upgrades unzip vim wget wireless-tools wpasupplicant"
 # Remove purge in the future
 echo "### Removing repository based install of elasticsearch-curator"
 apt-get purge elasticsearch-curator -y
@@ -212,13 +211,13 @@ apt-fast -y purge exim4-base mailutils pcp cockpit-pcp elasticsearch-curator
 apt-mark hold exim4-base mailutils pcp cockpit-pcp elasticsearch-curator
 echo
 
-echo "### Now replacing T-Ops related config files on host"
+echo "### Now replacing T-Pot related config files on host"
 cp host/etc/systemd/* /etc/systemd/system/
 systemctl daemon-reload
 echo
 
 # Ensure some defaults
-echo "### Ensure some T-Ops defaults with regard to some folders, permissions and configs."
+echo "### Ensure some T-Pot defaults with regard to some folders, permissions and configs."
 sed -i '/^port/Id' /etc/ssh/sshd_config
 echo "Port 64295" >> /etc/ssh/sshd_config
 echo
@@ -239,6 +238,7 @@ mkdir -vp /data/adbhoney/{downloads,log} \
          /data/heralding/log \
          /data/honeypy/log \
          /data/honeysap/log \
+	 /data/ipphoney/log \
          /data/mailoney/log \
          /data/medpot/log \
          /data/nginx/{log,heimdall} \
@@ -266,7 +266,7 @@ echo "### If you made changes to tpot.yml please ensure to add them again."
 echo "### We stored the previous version as backup in /root/."
 echo "### Some updates may need an import of the latest Kibana objects as well."
 echo "### Download the latest objects here if they recently changed:"
-echo "### https://raw.githubusercontent.com/nu11secur1ty/T-Ops/master/etc/objects/kibana_export.json.zip"
+echo "### https://raw.githubusercontent.com/telekom-security/tpotce/master/etc/objects/kibana_export.ndjson.zip"
 echo "### Export and import the objects easily through the Kibana WebUI:"
 echo "### Go to Kibana > Management > Saved Objects > Export / Import"
 echo "### Or use the command:"
@@ -305,7 +305,7 @@ fi
 
 # Only run with command switch
 if [ "$1" != "-y" ]; then
-  echo "This script will update / upgrade all T-Ops related scripts, tools and packages to the latest versions."
+  echo "This script will update / upgrade all T-Pot related scripts, tools and packages to the latest versions."
   echo "A backup of /opt/tpot will be written to /root. If you are unsure, you should save your work."
   echo "This is a beta feature and only recommended for experienced users."
   echo "If you understand the involved risks feel free to run this script with the '-y' switch."

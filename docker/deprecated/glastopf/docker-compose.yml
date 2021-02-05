@@ -16,7 +16,7 @@ services:
      - glastopf_local
     ports:
      - "8081:80"
-    image: "nu11secur1ty/glastopf"
+    image: "ghcr.io/telekom-security/glastopf:1903"
     read_only: true
     volumes:
      - /data/glastopf/db:/tmp/glastopf/db
