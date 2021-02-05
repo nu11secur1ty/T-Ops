@@ -2,8 +2,9 @@
 
 - - - Configuration
 ```
-etc
-docker
+etc/
+docker/
+iso/
 install.sh
 makeiso.sh
 ```
