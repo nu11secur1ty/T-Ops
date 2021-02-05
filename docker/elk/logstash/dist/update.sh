@@ -35,63 +35,11 @@ if [ "$myCHECK" == "0" ];
     echo "Cannot reach Listbot, starting Logstash without latest translation maps."
 fi
 
-# We do want to enforce our es_template thus we always need to delete the default template, putting our default afterwards
+# Make sure logstash can put latest logstash template by deleting the old one first
 # This is now done via common_configs.rb => overwrite default logstash template
-echo "Removing logstash template."
-curl -s -XDELETE http://elasticsearch:9200/_template/logstash
-echo
-echo "Checking if empty."
-curl -s -XGET http://elasticsearch:9200/_template/logstash
-echo
-echo "Putting default template."
-curl -s -XPUT "http://elasticsearch:9200/_template/logstash" -H 'Content-Type: application/json' -d'
-{
-  "index_patterns" : "logstash-*",
-  "version" : 60001,
-  "settings" : {
-    "index.refresh_interval" : "5s",
-    "number_of_shards" : 1,
-    "index.number_of_replicas" : "0",
-    "index.mapping.total_fields.limit" : "2000",
-    "index.query": {
-      "default_field": "*"
-     }
-  },
-  "mappings" : {
-    "dynamic_templates" : [ {
-      "message_field" : {
-        "path_match" : "message",
-        "match_mapping_type" : "string",
-        "mapping" : {
-          "type" : "text",
-          "norms" : false
-        }
-      }
-    }, {
-      "string_fields" : {
-        "match" : "*",
-        "match_mapping_type" : "string",
-        "mapping" : {
-          "type" : "text", "norms" : false,
-          "fields" : {
-            "keyword" : { "type": "keyword", "ignore_above": 256 }
-          }
-        }
-      }
-    } ],
-    "properties" : {
-      "@timestamp": { "type": "date"},
-      "@version": { "type": "keyword"},
-      "geoip"  : {
-        "dynamic": true,
-        "properties" : {
-          "ip": { "type": "ip" },
-          "location" : { "type" : "geo_point" },
-          "latitude" : { "type" : "half_float" },
-          "longitude" : { "type" : "half_float" }
-        }
-      }
-    }
-  }
-}'
-echo
+#echo "Removing logstash template."
+#curl -XDELETE http://elasticsearch:9200/_template/logstash
+#echo
+#echo "Checking if empty."
+#curl -XGET http://elasticsearch:9200/_template/logstash
+#echo

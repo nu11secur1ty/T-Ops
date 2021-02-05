@@ -1,11 +1,11 @@
-FROM alpine:edge
+FROM alpine:latest
 #
 # Include dist
 ADD dist/ /root/dist/
 #
 # Setup apt
-#RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
-RUN apk -U add \
+RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
+    apk -U add \
              build-base \
              file \
              git \
@@ -26,9 +26,10 @@ RUN apk -U add \
              wget && \
 #
 # Setup ConPot
-    git clone https://github.com/mushorg/conpot /opt/conpot && \
+    git clone --depth=1 https://github.com/mushorg/conpot /opt/conpot && \
     cd /opt/conpot/ && \
-    git checkout ff09e009d10d953aa7dcff2c06b7c890e6ffd4b7 && \
+    # Patch to accept ENV for MIB path
+    sed -i "s/tmp_mib_dir = tempfile.mkdtemp()/tmp_mib_dir = tempfile.mkdtemp(dir=os.environ['CONPOT_TMP'])/" /opt/conpot/conpot/protocols/snmp/snmp_server.py && \
     # Change template default ports if <1024
     sed -i 's/port="2121"/port="21"/' /opt/conpot/conpot/templates/default/ftp/ftp.xml && \ 
     sed -i 's/port="8800"/port="80"/' /opt/conpot/conpot/templates/default/http/http.xml && \ 
@@ -41,7 +42,6 @@ RUN apk -U add \
     sed -i 's/port="6230"/port="623"/' /opt/conpot/conpot/templates/ipmi/ipmi/ipmi.xml && \ 
     pip3 install --no-cache-dir -U setuptools && \
     pip3 install --no-cache-dir . && \
-    pip3 install --no-cache-dir pysnmp-mibs && \
     cd / && \
     rm -rf /opt/conpot /tmp/* /var/tmp/* && \
     setcap cap_net_bind_service=+ep /usr/bin/python3.8 && \
@@ -75,4 +75,4 @@ RUN apk -U add \
 # Start conpot
 STOPSIGNAL SIGINT
 USER conpot:conpot
-CMD exec /usr/bin/conpot --mibcache $CONPOT_TMP --temp_dir $CONPOT_TMP --template $CONPOT_TEMPLATE --logfile $CONPOT_LOG --config $CONPOT_CONFIG
+CMD exec /usr/bin/conpot --temp_dir $CONPOT_TMP --template $CONPOT_TEMPLATE --logfile $CONPOT_LOG --config $CONPOT_CONFIG

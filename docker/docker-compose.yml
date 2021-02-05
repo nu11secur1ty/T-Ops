@@ -10,98 +10,98 @@ services:
 # Adbhoney service
   adbhoney:
     build: adbhoney/.
-    image: "ghcr.io/telekom-security/adbhoney:2006"
+    image: "nu11secur1ty/adbhoney"
 
 # Ciscoasa service
   ciscoasa:
     build: ciscoasa/.
-    image: "ghcr.io/telekom-security/ciscoasa:2006"
+    image: "nu11secur1ty/ciscoasa"
 
 # CitrixHoneypot service
   citrixhoneypot:
     build: citrixhoneypot/.
-    image: "ghcr.io/telekom-security/citrixhoneypot:2006"
+    image: "nu11secur1ty/citrixhoneypot"
 
 # Conpot IEC104 service
   conpot_IEC104:
     build: conpot/.
-    image: "ghcr.io/telekom-security/conpot:2006"
+    image: "nu11secur1ty/conpot"
 
 # Cowrie service
   cowrie:
     build: cowrie/.
-    image: "ghcr.io/telekom-security/cowrie:2006"
+    image: "nu11secur1ty/cowrie"
 
 # Dicompot service
   dicompot:
     build: dicompot/.
-    image: "ghcr.io/telekom-security/dicompot:2006"
+    image: "nu11secur1ty/dicompot"
 
 # Dionaea service
   dionaea:
     build: dionaea/.
-    image: "ghcr.io/telekom-security/dionaea:2006"
+    image: "nu11secur1ty/dionaea"
 
 # ElasticPot service
   elasticpot:
     build: elasticpot/.
-    image: "ghcr.io/telekom-security/elasticpot:2006"
+    image: "nu11secur1ty/elasticpot"
 
 # Glutton service
   glutton:
     build: glutton/.
-    image: "ghcr.io/telekom-security/glutton:2006"
+    image: "nu11secur1ty/glutton"
 
 # Heralding service
   heralding:
     build: heralding/.
-    image: "ghcr.io/telekom-security/heralding:2006"
+    image: "nu11secur1ty/heralding"
 
 # HoneyPy service
   honeypy:
     build: honeypy/.
-    image: "ghcr.io/telekom-security/honeypy:2006"
+    image: "nu11secur1ty/honeypy"
 
 # Honeytrap service
   honeytrap:
     build: honeytrap/.
-    image: "ghcr.io/telekom-security/honeytrap:2006"
+    image: "nu11secur1ty/honeytrap"
 
 # Mailoney service
   mailoney:
     build: mailoney/.
-    image: "ghcr.io/telekom-security/mailoney:2006"
+    image: "nu11secur1ty/mailoney"
 
 # Medpot service
   medpot:
     build: medpot/.
-    image: "ghcr.io/telekom-security/medpot:2006"
+    image: "nu11secur1ty/medpot"
 
 # Rdpy service
   rdpy:
     build: rdpy/.
-    image: "ghcr.io/telekom-security/rdpy:2006"
+    image: "nu11secur1ty/rdpy"
 
 #### Snare / Tanner
 ## Tanner Redis Service
   tanner_redis:
     build: tanner/redis/.
-    image: "ghcr.io/telekom-security/redis:2006"
+    image: "nu11secur1ty/redis"
 
 ## PHP Sandbox service
   tanner_phpox:
     build: tanner/phpox/.
-    image: "ghcr.io/telekom-security/phpox:2006"
+    image: "nu11secur1ty/phpox"
 
 ## Tanner API Service
   tanner_api:
     build: tanner/tanner/.
-    image: "ghcr.io/telekom-security/tanner:2006"
+    image: "nu11secur1ty/tanner"
 
 ## Snare Service
   snare:
     build: tanner/snare/.
-    image: "ghcr.io/telekom-security/snare:2006"
+    image: "nu11secur1ty/snare"
 
 
 ##################
@@ -111,17 +111,17 @@ services:
 # Fatt service
   fatt:
     build: fatt/.
-    image: "ghcr.io/telekom-security/fatt:2006"
+    image: "nu11secur1ty/fatt"
 
 # P0f service
   p0f:
     build: p0f/.
-    image: "ghcr.io/telekom-security/p0f:2006"
+    image: "nu11secur1ty/p0f"
 
 # Suricata service
   suricata:
     build: suricata/.
-    image: "ghcr.io/telekom-security/suricata:2006"
+    image: "nu11secur1ty/suricata"
 
 
 ##################
@@ -129,42 +129,45 @@ services:
 ##################
 
 # Cyberchef service
-  cyberchef:
-    build: cyberchef/.
-    image: "ghcr.io/telekom-security/cyberchef:2006"
-
+  #cyberchef:
+    #build: cyberchef/.
+    #image: "nu11secur1ty/cyberchef"
+    
 #### ELK
 ## Elasticsearch service
   elasticsearch:
     build: elk/elasticsearch/.
-    image: "ghcr.io/telekom-security/elasticsearch:2006"
+    image: "nu11secur1ty/elasticsearch"
 
 ## Kibana service
   kibana:
     build: elk/kibana/.
-    image: "ghcr.io/telekom-security/kibana:2006"
+    image: "nu11secur1ty/kibana"
 
 ## Logstash service
   logstash:
     build: elk/logstash/.
-    image: "ghcr.io/telekom-security/logstash:2006"
+    image: "nu11secur1ty/logstash"
 
 ## Elasticsearch-head service
   head:
     build: elk/head/.
-    image: "ghcr.io/telekom-security/head:2006"
+    image: "nu11secur1ty/head"
 
 # Ewsposter service
   ewsposter:
     build: ews/.
-    image: "ghcr.io/telekom-security/ewsposter:2006"
+    image: "nu11secur1ty/ewsposter"
 
 # Nginx service
   nginx:
     build: heimdall/.
-    image: "ghcr.io/telekom-security/nginx:2006"
+    image: "nu11secur1ty/nginx"
 
 # Spiderfoot service
-  spiderfoot:
-    build: spiderfoot/.
-    image: "ghcr.io/telekom-security/spiderfoot:2006"
+#  spiderfoot:
+#    build: spiderfoot/.
+#    image: "nu11secur1ty/spiderfoot"
+    
+# Old example: 
+# image: "dtagdevsec/head:2006"

@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:latest 
 #
 # Include dist
 ADD dist/ /root/dist/
@@ -13,9 +13,7 @@ RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
             python3-dev && \
 #
 # Install adbhoney from git
-    git clone https://github.com/huuck/ADBHoney /opt/adbhoney && \
-    cd /opt/adbhoney && \
-    git checkout ad7c17e78d01f6860d58ba826a4b6a4e4f83acbd && \
+    git clone --depth=1 https://github.com/huuck/ADBHoney /opt/adbhoney && \
     cp /root/dist/adbhoney.cfg /opt/adbhoney && \
     sed -i 's/dst_ip/dest_ip/' /opt/adbhoney/adbhoney/core.py && \
     sed -i 's/dst_port/dest_port/' /opt/adbhoney/adbhoney/core.py && \
