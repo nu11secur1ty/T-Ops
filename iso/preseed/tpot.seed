@@ -1,5 +1,5 @@
 ##############################################
-### T-Pot Preseed Configuration File by mo ###
+### T-Ops Preseed Configuration File by mo ###
 ##############################################
 
 ####################
@@ -124,14 +124,14 @@ d-i debian-installer/quiet boolean false
 d-i debian-installer/splash boolean false
 
 #########################################
-### Post install (Grub & T-Pot Installer)
+### Post install (Grub & T-Ops Installer)
 #########################################
 d-i preseed/late_command string \
 in-target apt-get -y install grub-pc; \
 in-target grub-install --force $(debconf-get partman-auto/disk); \
 update-dev; \
 in-target update-grub; \
-in-target git clone --depth=1 https://github.com/telekom-security/tpotce /opt/tpot; \
+in-target git clone --depth=1 https://github.com/nu11secur1ty/T-Ops /opt/tpot; \
 in-target sed -i 's/allow-hotplug/auto/g' /etc/network/interfaces; \
 #in-target apt-get -y remove exim4-base; \
 #in-target apt-get -y autoremove; \
