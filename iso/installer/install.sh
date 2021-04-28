@@ -2,8 +2,8 @@
 # T-Ops Universal Installer
 
 # Installer can only be executed once.
-myTPOT_INSTALL_LOG="/install.log"
-if [ -s "$myTPOT_INSTALL_LOG" ];
+myTOPS_INSTALL_LOG="/install.log"
+if [ -s "$myTOPS_INSTALL_LOG" ];
   then
     echo "Aborting. Installer can only be executed once."
     exit
