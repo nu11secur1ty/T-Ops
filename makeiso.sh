@@ -4,7 +4,7 @@
 export TERM=linux
 
 # Let's define some global vars
-myBACKTITLE="T-Pot - ISO Creator"
+myBACKTITLE="T-Ops - ISO Creator"
 #myMINIISOLINK="http://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/images/netboot/mini.iso"
 #myMINIISOLINK="https://d-i.debian.org/daily-images/amd64/daily/netboot/mini.iso"
 # For stability reasons Debian Sid installation is built on a stable installer
