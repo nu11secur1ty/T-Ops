@@ -4,6 +4,8 @@
 
 ## Based on ***https://github.com/telekom-security/tpotce***
 
+![](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
+
 - - - Configuration
 ```
 docker/
