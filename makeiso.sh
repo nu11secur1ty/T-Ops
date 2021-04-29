@@ -3,6 +3,9 @@
 # Set TERM, DIALOGRC
 export TERM=linux
 
+# Clean old mini.iso && tops.iso
+rm -rf mini.iso tops.iso
+
 # Let's define some global vars
 myBACKTITLE="T-Ops - ISO Creator"
 #myMINIISOLINK="http://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/images/netboot/mini.iso"
