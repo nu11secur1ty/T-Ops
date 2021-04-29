@@ -1,6 +1,8 @@
-![WELCOME to T-Ops](doc/T-Ops.png)
+![T-Ops](doc/T-Ops.png)
 
-## Based on https://github.com/telekom-security/tpotce
+## WELCOME to ***T-Ops:***
+
+## Based on ***https://github.com/telekom-security/tpotce***
 
 - - - Configuration
 ```
