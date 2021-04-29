@@ -1,6 +1,6 @@
 ![T-Ops](doc/T-Ops.png)
 
-## WELCOME to ***T-Ops:*** `Cracker hunter` **codename Kung-fu**
+## WELCOME to ***T-Ops 20.06.3:*** `Cracker hunter` **codename Kung-fu**
 
 ## Based on ***https://github.com/telekom-security/tpotce***
 
