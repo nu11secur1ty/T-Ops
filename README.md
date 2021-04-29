@@ -215,15 +215,15 @@ For transparency reasons and to give you the ability to customize your install y
 
 1. Clone the repository and enter it.
 ```
-git clone https://github.com/telekom-security/tpotce
-cd tpotce
+git https://github.com/nu11secur1ty/T-Ops
+cd T-Ops
 ```
 2. Run the `makeiso.sh` script to build the ISO image.
 The script will download and install dependencies necessary to build the image on the invoking machine. It will further download the ubuntu network installer image (~50MB) which T-Ops is based on.
 ```
 sudo ./makeiso.sh
 ```
-After a successful build, you will find the ISO image `tpot.iso` along with a SHA256 checksum `tpot.sha256` in your folder.
+After a successful build, you will find the ISO image `tops.iso` along with a SHA256 checksum `tpot.sha256` in your folder.
 
 <a name="vm"></a>
 ## Running in VM
@@ -264,8 +264,8 @@ The T-Ops Universal Installer will upgrade the system and install all required T
 Just follow these steps:
 
 ```
-git clone https://github.com/telekom-security/tpotce
-cd tpotce/iso/installer/
+git clone https://github.com/nu11secur1ty/T-Ops
+cd T-Ops/iso/installer/
 ./install.sh --type=user
 ```
 
@@ -273,13 +273,13 @@ The installer will now start and guide you through the install process.
 
 <a name="postinstallauto"></a>
 ## Post-Install Auto
-You can also let the installer run automatically if you provide your own `tpot.conf`. An example is available in `tpotce/iso/installer/tpot.conf.dist`. This should make things easier in case you want to automate the installation i.e. with **Ansible**.
+You can also let the installer run automatically if you provide your own `tpot.conf`. An example is available in `T-Ops/iso/installer/tpot.conf.dist`. This should make things easier in case you want to automate the installation i.e. with **Ansible**.
 
 Just follow these steps while adjusting `tpot.conf` to your needs:
 
 ```
-git clone https://github.com/telekom-security/tpotce
-cd tpotce/iso/installer/
+git clone https://github.com/nu11secur1ty/T-Ops
+cd T-Ops/iso/installer/
 cp tpot.conf.dist tpot.conf
 ./install.sh --type=auto --conf=tpot.conf
 ```
@@ -475,7 +475,7 @@ As with every development there is always room for improvements ...
 
 Some features may be provided with updated docker images, others may require some hands on from your side.
 
-You are always invited to participate in development on our [GitHub](https://github.com/telekom-security/tpotce) page.
+You are always invited to participate in development on our [GitHub](https://github.com/nu11secur1ty/T-Ops) page.
 
 <a name="disclaimer"></a>
 # Disclaimer
@@ -487,7 +487,7 @@ You are always invited to participate in development on our [GitHub](https://git
 
 <a name="faq"></a>
 # FAQ
-Please report any issues or questions on our [GitHub issue list](https://github.com/telekom-security/tpotce/issues), so the community can participate.
+Please report any issues or questions on our [GitHub issue list](https://github.com/nu11secur1ty/T-Ops/issues), so the community can participate.
 
 <a name="contact"></a>
 # Contact
