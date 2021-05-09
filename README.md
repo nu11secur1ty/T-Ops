@@ -3,8 +3,9 @@
 ## WELCOME to ***T-Ops 20.06.3:*** `Cracker hunter` **codename Kung-fu**
 
 ## Based on ***https://github.com/telekom-security/tpotce***
+## Deutsche Telekom Security:
 
-![](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
+![more](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
 
 - - - Configuration
 ```
