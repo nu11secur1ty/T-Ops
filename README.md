@@ -4,7 +4,7 @@
 
 ## Based on ***Deutsche Telekom Security***
 
-[more:](https://github.com/telekom-security/tpotce)
+[Link](https://github.com/telekom-security/tpotce)
 
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
 
