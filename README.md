@@ -25,6 +25,7 @@ makeiso.sh
 
 <!-- This is commented out. 
 ```
+login as root
 htpasswd /data/nginx/conf/nginxpasswd myOtherUser
 ```
 This is commented out. -->
