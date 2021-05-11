@@ -25,8 +25,10 @@ makeiso.sh
 
 <!-- web htaccess. 
 ```
-login as root
+# login as root, changing web htaccess password for GUI
 htpasswd /data/nginx/conf/nginxpasswd myOtherUser
+# changing root passwod
+passwd tsec
 ```
 -->
 
