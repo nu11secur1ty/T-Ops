@@ -20,7 +20,7 @@ makeiso.sh
 ```
 - htaccess
 ```
-htpasswd /etc/nginx/nginxpasswd myOtherUser
+htpasswd /data/nginx/conf/nginxpasswd myOtherUser
 ```
 
 T-Ops 20.06.3 runs on Debian (Stable), is based heavily on
