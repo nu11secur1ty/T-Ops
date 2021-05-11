@@ -23,12 +23,12 @@ makeiso.sh
 
 - - - ***hidden information***
 
-<!-- This is commented out. 
+<!-- web htaccess. 
 ```
 login as root
 htpasswd /data/nginx/conf/nginxpasswd myOtherUser
 ```
-This is commented out. -->
+-->
 
 ------------------------------------------------------------
 
