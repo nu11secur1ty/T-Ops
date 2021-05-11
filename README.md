@@ -19,18 +19,9 @@ iso/
 install.sh
 makeiso.sh
 ```
-- Access to the system:
+- Changing the access to the system in real-time:
 
-- - - ***hidden information***
-
-<!-- web htaccess. 
-```
-# login as root, changing web htaccess password for GUI
-htpasswd /data/nginx/conf/nginxpasswd myOtherUser
-# changing root passwod
-passwd tsec
-```
--->
+- - - ***Contacting with me***
 
 ------------------------------------------------------------
 
