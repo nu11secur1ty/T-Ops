@@ -8,6 +8,7 @@
 
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
 
+-----------------------------------------------------------------
 - - - Configuration
 
 - Setup
@@ -19,11 +20,16 @@ install.sh
 makeiso.sh
 ```
 - htaccess:
+
+- - - ***hidden information***
+
 <!-- This is commented out. 
 ```
 htpasswd /data/nginx/conf/nginxpasswd myOtherUser
 ```
 This is commented out. -->
+
+------------------------------------------------------------
 
 T-Ops 20.06.3 runs on Debian (Stable), is based heavily on
 
