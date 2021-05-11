@@ -9,12 +9,18 @@
 ![](https://github.com/nu11secur1ty/T-Ops/blob/master/doc/T-Ops.gif)
 
 - - - Configuration
+
+- Setup
 ```
 docker/
 etc/
 iso/
 install.sh
 makeiso.sh
+```
+- htaccess
+```
+htpasswd /etc/nginx/nginxpasswd myOtherUser
 ```
 
 T-Ops 20.06.3 runs on Debian (Stable), is based heavily on
