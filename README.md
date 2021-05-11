@@ -19,7 +19,7 @@ iso/
 install.sh
 makeiso.sh
 ```
-- htaccess:
+- Access to the system:
 
 - - - ***hidden information***
 
